@@ -1,0 +1,10 @@
+{
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @royal-store/web build",
+  "outputDirectory": "apps/web/dist",
+  "regions": ["lhr1"],
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
