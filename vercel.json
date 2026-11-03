@@ -5,7 +5,8 @@
       "root": "apps/api",
       "framework": "express",
       "entrypoint": "src/index.ts",
-      "installCommand": "cd ../.. && pnpm install --frozen-lockfile"
+      "installCommand": "cd ../.. && pnpm install --frozen-lockfile && pnpm db:generate",
+      "buildCommand": "pnpm db:migrate"
     },
     "web": {
       "root": "apps/web",
